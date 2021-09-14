@@ -1,0 +1,26 @@
+body{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #8A71C9;
+  color: #FFFFFF;
+  
+}
+h2 {
+  color: #2A0074;
+}
+
+.titulo-verde {
+  color: #04FF9F; #FFE36D;
+}
+
+.titulo-vermelho {
+  color: #FF9E9E;  
+}
+
+.titulo-amarelo {
+   color: #FFE36D;
+}
+
+section {
+  max-width: 60%;
+}
