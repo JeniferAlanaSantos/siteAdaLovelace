@@ -1,0 +1,26 @@
+*{
+    /* Aligns */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Fonts */
+    font-family: "Open Sans", sans-serif;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+}
+
+body, html {
+    /* Sizes */
+    height: 100%;
+
+    /* Colors */
+    background-color: #8A71C9;
+    color: aliceblue;
+
+    /* Aligns */
+    scroll-behavior: smooth;
+}

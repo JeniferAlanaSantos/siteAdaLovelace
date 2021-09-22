@@ -1,0 +1,73 @@
+article{
+    /* Sizes */
+    padding: 55px;
+
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: center;
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+
+    /* Times */
+    transition: cubic-bezier(0.3, -0.5, 0.2, .6) .4s;
+}
+
+article:hover{
+    /* Aligns */
+    margin: auto;
+
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+article:not(#_3, #_4){
+    /* Sizes */
+    min-height: 100%;
+
+    /* Aligns */
+    display: flex;
+    flex-direction: row;
+}
+
+article#_4{
+    /* Aligns */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article#_4 p:last-child{
+    /* Aligns */
+    margin-bottom: 50px;
+}
+
+article#_4 p:not(:last-child){
+    /* Aligns */
+    margin-bottom: 20px;
+}
+
+article h3, article h2{
+    /* Aligns */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+article p{
+    /* Sizes */
+    width: 80%;
+
+    /* Aligns */
+    margin: auto;
+    text-align: center;
+}
+
+article h2:hover::before, article h3:hover::before{
+    /* Aligns */
+    content: "§ ";
+    cursor: pointer;
+
+    /* Colors */
+    color: rgba(255, 0, 0, 0.562);
+}

@@ -1,0 +1,38 @@
+@keyframes header_animation {
+    0% {
+        background-size: 100% auto;
+    }
+    100% {
+        background-size: 0% auto;
+    }
+}
+
+header{
+    /* Colors */
+    background-image: linear-gradient(to right, rgb(80, 21, 218), red);
+
+    /* Sizes */
+    width: 100%;
+    padding: 18px 0;
+
+    /* Aligns */
+    margin: auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+
+    /* Times */
+    transition-property: background-size;
+    transition-duration: .5s;
+}
+
+header:hover{
+    /* Animations */
+    animation-name: header_animation;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.9, 0.04, 0.6, 0.25);
+
+    /* Aligns */
+    background-size: 0% auto;
+}
