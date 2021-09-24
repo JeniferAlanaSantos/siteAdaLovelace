@@ -1,16 +1,29 @@
+/* Style original BY Jennifer */
+
+/*
+Body original
+
 body{
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   background-color: #8A71C9;
   color: #FFFFFF;
-  
 }
+*/
+
+/* 
+  Vou reutilizar o código abaixo,
+  já que é essencial para a
+  idéia do site...
+*/
+
 h2 {
-  color: #2A0074;
+  /* color: #2A0074;*/
+  color: #3856ff;
 }
 
 .titulo-verde {
-  color: #04FF9F; #FFE36D;
+  color: #04FF9F;
 }
 
 .titulo-vermelho {
@@ -21,6 +34,10 @@ h2 {
    color: #FFE36D;
 }
 
+/*
+Section original
+
 section {
   max-width: 60%;
 }
+*/

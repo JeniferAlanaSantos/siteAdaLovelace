@@ -1,0 +1,53 @@
+footer{
+    /* Aligns */
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+    /* Sizes */
+    padding: 40px;
+    padding-left: 10%;
+    width: 80%;
+    border-radius: 40px 40px 0 0;
+    margin-top: -45px;
+
+    /* Colors */
+    background-color: rgba(85, 0, 255, 0.33);
+
+    /* Times */
+    transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+}
+
+footer:hover{
+    /* Colors */
+    background-color: rgb(61, 13, 155);
+}
+
+footer ul{
+    /* Aligns */
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+footer :not(#image-footer){
+    /* Aligns */
+    z-index: 2;
+}
+
+footer #image-footer{
+    /* Aligns */
+    background-image: url("../img/footer_girl.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: .5;
+
+    /* Sizes */
+    background-size: auto 250%;
+    min-width: 350px;
+    height: 100%;
+}

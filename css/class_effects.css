@@ -1,0 +1,47 @@
+img:not(.default){
+    /* Sizes */
+    border-radius: 50px 5px;
+    background-position: center;
+    min-width: 500px;
+    height: min-content;
+
+    /* Aligns */
+    margin: auto;
+
+    /* Times */
+    transition: cubic-bezier(0.68, -0.56, 0.265, 1.55) .45s;
+}
+
+img:not(.default):hover{
+    /* Aligns */
+    transform: scale(.9);
+
+    /* Sizes */
+    border-radius: 5px 50px;
+}
+
+a{
+    /* Colors */
+    color: rgb(74, 71, 255);
+    text-decoration: none;
+    background-image: linear-gradient(to right, red, blue, lime);
+
+    /* Sizes */
+    background-size: 0% 3px;
+
+    /* Aligns */
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    /* Times */
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) .5s;
+}
+
+a:hover{
+    /* Colors */
+    color: white;
+    box-shadow: 2px 2px 10px blue;
+
+    /* Sizes */
+    background-size: 100% 3px;
+}
