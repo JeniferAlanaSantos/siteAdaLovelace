@@ -1,7 +1,7 @@
 /*
-==================
-  Imports fonts 
-==================
+===========
+  Fonts 
+===========
 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;1,400&display=swap');
@@ -62,7 +62,6 @@ p{
 
 body{
   background-color: var(--bg);
-  /* min-width: 100vh; min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
