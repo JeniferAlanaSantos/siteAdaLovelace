@@ -1,90 +1,480 @@
-body{
-  text-align: center;
+/*
+==================
+  Imports fonts 
+==================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Sans+Pro:ital,wght@0,600;1,400&display=swap');
+
+/*
+================
+  Scroll Bar
+================
+*/
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: #333;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: rebeccapurple;
+  border-radius: 6px;
+}
+
+
+/*
+===============
+  Variables
+===============
+*/
+:root{
+  --bg:#6d56a7;
+  --main-color: #FFFFFF;
+  --green: #04FF9F;
+  --red: #FF9E9E;
+  --yellow: #FFE36D;
+  --links-color: #99FFFF;
+}
+
+/* 
+=============
+  Globals 
+=============
+*/
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  background-color: #8A71C9;
-  color: #FFFFFF;
-  margin: 0;
-  margin: 0px 0px 30px 0px;
 }
 
-h1{
-  font-size: 60px;
-  font-weight: 300;
-}
-
-h2 {
-  color: #2A0074;
-  font-size: 40px;
-}
-
-h3{
-  font-size: 22px;
-  font-style: italic;
+*::selection{
+  background: #333;
+  color: #e40d79;
 }
 
 p{
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 1.3rem;
 }
 
-.titulo-verde {
-  color: #04FF9F;
-}
-
-.titulo-vermelho {
-  color: #FF9E9E;  
-}
-
-.titulo-amarelo {
-   color: #FFE36D;
-}
-
-section {
-  width: 60%;
-  margin: 0 auto;
-}
-
-section section {
-  width: 100%;
+body{
+  background-color: var(--bg);
+  /* min-width: 100vh; min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 img{
+  width: 300px;
+  object-fit: cover;
+}
+
+.content{
+  color: var(--main-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: .8rem;
+  text-indent: 50px;
+}
+
+.heading{
+  text-indent: 0;  
+  font-size: 2rem;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/*
+===========
+  Header
+===========
+*/
+.header{
+  color: var(--main-color);
+  width: 100%;
+  gap: 1.4rem;
+  background: linear-gradient(to right, #e74a99, #b81161);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 5px solid #FF6CB5;
+}
+
+.header h1{
+  font-weight: 600;
+  font-family: 'Fira Sans', sans-serif;
+  padding: 1.5em;
+  text-align: center;
+}
+
+/*
+==============
+  Nav center
+==============
+*/
+.nav-center{
+  background: #333; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  gap: 1rem;
+}
+
+.nav-center h2{
+  color: #e40d79;
+  font-size: 2em;
+}
+
+/*
+===========
+  Navbar
+===========
+*/
+.navbar{
   width: 100%;
 }
 
-ul{
-  list-style-type: none;
-  line-height: 2;
-  padding-left: 0;
+.navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 1.5em;
 }
 
-a{
+.navbar ul li a{
+  color: var(--main-color);
+  border-bottom: 3px solid;
+  font-size: 1.8rem; 
   text-decoration: none;
-  color: #99FFFF;
-  font-weight: 700; 
+  transition: all 1s ease;
 }
 
-.principal{
-  background-color: #FF6CB5;
-  height: 40px;
-  max-width: 60%;
-  margin: 0 auto;
-}
-.principal ul li a{
-  color: #FFFFFF;
-  text-decoration: underline;
-  font-weight: 0;
+.navbar ul li a:hover{
+  border-bottom: 3px solid #e40d79;
+  letter-spacing: 3px;
 }
 
-.principal ul li{
-  display: inline-block;
-  line-height: 2.5;
-  margin: 0 89px;
+/*
+===========
+  Page
+===========
+*/
+.page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--bg);
+  gap: 4rem;
+  padding-top: 0.2px;
 }
 
-button {
+/*
+===========
+  Hero
+===========
+*/
+.hero{
+  width: 100%; height: 41em;
+  background: url(../img/adaTabela.png) no-repeat;
+  background-size: cover;
+  background-position: cover;
+}
+
+.hero-container{
+  background: rgba(0, 0, 0, .7);
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero .hero-container .hero-text{
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  align-items:center;
+  justify-items: center;
+  flex-direction: column;
+  color: #fefefe;
+}
+
+.hero-text h2{
+  padding-bottom: 2.2em;
+  font-size: 1.9em;
+}
+
+.hero-text p{
+  font-size: 1.4rem;
+  line-height: 1cm;
+}
+
+
+@media screen and (max-width: 769px){
+  .hero{
+    background-position: center;
+  }
+
+  .hero .hero-container .hero-text{
+    width: 100%;
+  }
+}
+
+/*
+=====================
+  Box Container
+=====================
+*/
+.box-container{
+  width: 100%;
+  display: flex;
+  flex: 1 1 25rem;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+  padding-right: 3em; 
+  text-align: justify;
+  padding: 4em;
+}
+
+.box-container div{
+  width: auto; height: 100%;
+  background: black;
+  border: 4px solid black;
+}
+
+.box-container div img{
+  object-fit: contain;
+}
+
+/*
+=============
+  Childhood
+=============
+*/
+.childhood .content .title-green{
+  color: var(--green);
+}
+
+.box-container.young{
+  gap: 2rem;
+}
+
+.young img{
+  width: 200px;
+}
+
+.young .content .title-red{
+  color: var(--red);
+}
+
+.adultLife .content .title-yellow{
+  color: var(--yellow);
+}
+
+
+/*
+=================
+  Outer-links
+=================
+*/
+.outer-links{
+  width: 100%; height: auto;
+  padding: 3rem;
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background: #201d1d;
+  color: var(--main-color);
+}
+
+.outer-links .heading{
+  color: #896abe;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.outer-links .nav-links{
+  width: 100%;
+  padding: 2rem;;
+}
+
+.nav-links ul{
+  padding: 2.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-links ul li a{
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+  padding: 1rem;
+  font-size: 1.3em; 
+  text-decoration: none;
+  transition: all 1s ease;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links ul li a:hover{
+  border: 3px solid #e40d79;
+  letter-spacing: 3px;
+}
+
+/*
+==============
+  Newsletter
+==============
+*/
+.newsletter{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding: 3em;  
+  gap: 3.9rem;
+}
+
+.newsletter form{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem
+}
+
+.inputBox label{
+  color: var(--main-color);
+  font-size: 1.6em;
+}
+
+.inputBox input{
+  padding: 1.6rem;
+  width: 22rem;
+  border: none;
+  border-radius: 12px;
+  background: #262626;
+  
+}
+
+.inputBox  input::placeholder{
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.newsletter form .button{
+  width: 19rem;
   background-color: #41F341;
   border: 1px solid transparent;
-  padding: 2px 20px;
+  padding: .9rem;
   border-radius: 3px;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newsletter form .button:hover{
+  background: transparent;
+  border: 1px solid #41F341;
+  color: #dfff;
+}
+
+@media screen and (min-width: 720px){
+  .newsletter form{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 891px){
+  .inputBox{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .inputBox input{
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 2200px){
+  .inputBox{
+    width: 50%;
+  }
+
+  .inputBox input{
+    width: 100%;
+  }
+
+  .newsletter form .button{
+    width: 100%;
+  }
+}
+
+/*
+================
+  Page Footer
+================
+*/
+.page-footer{
+  width: 100%;
+  margin-top: 3rem;
+  background: linear-gradient(to right, #e74a99, #b81161);
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Fira Sans', sans-serif;
+  padding: 1em;
+  color: var(--main-color);
+  border-top: 5px solid #FF6CB5;
+  text-align: center;
+}
+
+/*
+==================
+  Scroll Top
+==================
+*/
+#scroll-top{
+  position: fixed;
+  top: -120%;
+  right: .1rem;
+  padding: .5rem 1.5rem;
+  font-size: 3rem;
+  color: var(--main-color);
+  border-radius: .5rem;
+  transition: .5s linear;
+  z-index: 1000;
+}
+
+#scroll-top.active{
+  top:calc(100% - 12rem)
 }
